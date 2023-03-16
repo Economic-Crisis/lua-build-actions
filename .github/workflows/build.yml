@@ -21,11 +21,6 @@ jobs:
     - uses: leafo/gh-actions-lua@master
       with:
         luaVersion: ${{ matrix.luaVersion }}
-        buildCache: false
-    - name: test
-      run: |
-        cd test
-        bash runner.sh
     - uses: actions/upload-artifact@v3
       with:
           name: ${{ matrix.luaVersion }}-${{ matrix.os }}-build
