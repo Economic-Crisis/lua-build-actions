@@ -26,7 +26,6 @@ jobs:
       run: |
         cd test
         bash runner.sh
-    - name: build artefacts
     - uses: actions/upload-artifact@v3
       with:
           name: ${{ matrix.luaVersion }}-${{ matrix.os }}-build
